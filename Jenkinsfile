@@ -1,10 +1,15 @@
 pipeline {
 
+  agent any
+  
   stages {
   
-    stage {
+    stage("Greeting") {
     
-      sh 'pwd'
+      steps {
+        
+        sh 'pwd && echo Hello World'
+      }  
     }
   
   }
